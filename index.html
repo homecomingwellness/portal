@@ -1,107 +1,56 @@
-
-import React from 'react';
-import { ShieldAlert, Heart, Info, Scale, Compass, Sparkles } from 'lucide-react';
-
-const MissionView: React.FC = () => {
-  return (
-    <div className="max-w-5xl mx-auto space-y-20 pb-20 animate-in fade-in duration-700">
-      <section className="text-center space-y-8 py-12">
-        <h2 className="text-5xl font-serif text-homecoming-cream leading-tight tracking-tighter">
-            guiding you home to wholeness.
-        </h2>
-        <div className="w-32 h-1 bg-homecoming-cream mx-auto rounded-full opacity-20"></div>
-        <p className="text-homecoming-cream/60 max-w-2xl mx-auto uppercase tracking-[0.4em] text-[10px] font-bold">
-            homecoming wellness group, llc
-        </p>
-      </section>
-
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-        <div className="bg-homecoming-darker p-12 rounded-[3rem] shadow-2xl border border-homecoming-lighter flex flex-col justify-center">
-          <h3 className="text-3xl font-serif text-homecoming-cream tracking-tighter text-center mb-8">the <span className="me-highlight">me</span> in homecoming</h3>
-          <p className="text-homecoming-cream/70 leading-relaxed mb-6 text-lg">
-            At Homecoming, we intentionally highlight the <span className="me-highlight uppercase text-homecoming-cream border-b-2 border-homecoming-cream">me</span> in ho<span className="me-highlight">me</span>coming—not to promote self-centered living, but to restore the part of you that has often been overlooked, stretched thin, or poured out for everyone else.
-          </p>
-          <p className="text-homecoming-cream/50 leading-relaxed italic text-center">
-            "ho<span className="me-highlight font-bold not-italic">me</span>coming is about the quiet, sacred return to the person God designed you to be."
-          </p>
-        </div>
-
-        <div className="bg-homecoming-cream p-12 rounded-[3rem] shadow-2xl flex flex-col justify-center">
-          <h3 className="text-3xl font-serif text-homecoming-green tracking-tighter text-center mb-8">the mission</h3>
-          <p className="text-homecoming-green/80 font-bold italic mb-6 text-xl text-center">"See deeply. Engage honestly. Walk intentionally."</p>
-          <p className="text-homecoming-green/60 leading-relaxed text-lg">
-            Our mission is to mentor teens and young adults toward wholeness in mind, spirit, and identity. We create Christ-centered spaces where individuals can explore their stories, confront what holds them back, and rediscover the “me” God designed them to be.
-          </p>
-        </div>
-      </div>
-
-      <section className="bg-homecoming-darker text-homecoming-cream p-12 rounded-[3rem] border border-homecoming-lighter space-y-10">
-        <div className="flex items-center gap-4 mb-8">
-           <Compass className="h-6 w-6 text-homecoming-cream/30" />
-           <h3 className="text-3xl font-serif tracking-tighter">our philosophy: the journey</h3>
-        </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
-           <div className="space-y-4">
-              <h4 className="text-xs font-bold uppercase tracking-widest text-homecoming-cream/60 flex items-center gap-2">
-                <Sparkles className="h-3 w-3" /> Restoration, Not Fixation
-              </h4>
-              <p className="text-sm text-homecoming-cream/40 leading-relaxed">
-                It’s not just about ‘fixing’ a situation, but about remembering who you are. We walk alongside you as you navigate trauma, mental health struggles, and broken relationships—guiding you toward a fuller, healthier, and whole way of living.
-              </p>
-           </div>
-           <div className="space-y-4">
-              <h4 className="text-xs font-bold uppercase tracking-widest text-homecoming-cream/60 flex items-center gap-2">
-                <Heart className="h-3 w-3" /> Coming Home to Self
-              </h4>
-              <p className="text-sm text-homecoming-cream/40 leading-relaxed">
-                As mentors, we don't just realize that you are walking towards healing but that you are coming home to yourself. It’s often in the subtle moments… the first time you say “no” when you mean it, or the first time you declare, “I deserve better.”
-              </p>
-           </div>
-        </div>
-      </section>
-
-      <section className="bg-homecoming-darker text-homecoming-cream p-16 rounded-[4rem] shadow-2xl relative overflow-hidden border border-homecoming-lighter text-center">
-        <div className="relative z-10 space-y-10">
-          <h3 className="text-4xl font-serif tracking-tighter">our anchor</h3>
-          <div className="w-16 h-px bg-homecoming-cream/20 mx-auto"></div>
-          <p className="text-2xl font-serif italic max-w-3xl mx-auto leading-relaxed text-homecoming-cream/90">
-            "Now may the God of peace Himself sanctify you completely; and may your whole spirit, soul, and body be preserved blameless at the coming of our Lord Jesus Christ. He who calls you is faithful, who also will do it."
-          </p>
-          <p className="font-bold uppercase tracking-[0.3em] text-xs text-homecoming-cream/40">1 Thessalonians 5:23–24</p>
-        </div>
-        <div className="absolute top-0 right-0 -mr-20 -mt-20 w-80 h-80 bg-homecoming-cream opacity-[0.03] rounded-full"></div>
-        <div className="absolute bottom-0 left-0 -ml-20 -mb-20 w-80 h-80 bg-homecoming-cream opacity-[0.03] rounded-full"></div>
-      </section>
-
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-10 pt-10">
-        <ValueBlock 
-            num="01" 
-            title="See Deeply" 
-            desc="Recognizing the narrative and spiritual identity beneath the surface behavior." 
-        />
-        <ValueBlock 
-            num="02" 
-            title="Engage Honestly" 
-            desc="Confronting patterns and trauma with truth, grace, and neuro-scientific insight." 
-        />
-        <ValueBlock 
-            num="03" 
-            title="Walk Intentionally" 
-            desc="Guiding you toward grounded wholeness as designed by God." 
-        />
-      </div>
-    </div>
-  );
-};
-
-const ValueBlock = ({ num, title, desc }: { num: string, title: string, desc: string }) => (
-    <div className="text-center p-10 bg-homecoming-green/20 rounded-3xl border border-homecoming-lighter transition-all hover:bg-homecoming-lighter">
-      <div className="w-16 h-16 bg-homecoming-cream text-homecoming-green rounded-full flex items-center justify-center mx-auto mb-8 shadow-lg">
-        <span className="font-serif font-bold text-xl">{num}</span>
-      </div>
-      <h4 className="font-bold text-homecoming-cream mb-4 uppercase tracking-widest text-sm">{title}</h4>
-      <p className="text-sm text-homecoming-cream/50 leading-relaxed">{desc}</p>
-    </div>
-);
-
-export default MissionView;
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homecoming Wellness Portal</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Caladea:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              homecoming: {
+                green: '#1a2e21',
+                cream: '#fdf6d0',
+                darker: '#14231a',
+                lighter: '#253d2e'
+              }
+            },
+            fontFamily: {
+              serif: ['Caladea', 'serif'],
+              sans: ['Inter', 'sans-serif'],
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #1a2e21; color: #fdf6d0; }
+        .font-serif { font-family: 'Caladea', serif; }
+        .me-highlight {
+            font-weight: 700;
+            font-style: normal; /* Specifically requested non-italic */
+        }
+        /* Custom scrollbar for a premium feel */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #1a2e21; }
+        ::-webkit-scrollbar-thumb { background: #253d2e; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #2e4a38; }
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "lucide-react": "https://esm.sh/lucide-react@^0.562.0",
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react": "https://esm.sh/react@^19.2.3",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "@google/genai": "https://esm.sh/@google/genai@^1.37.0"
+  }
+}
+</script>
+</head>
+<body class="min-h-screen">
+    <div id="root"></div>
+</body>
+</html>
